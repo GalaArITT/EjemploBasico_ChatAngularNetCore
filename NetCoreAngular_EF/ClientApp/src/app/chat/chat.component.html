@@ -1,0 +1,18 @@
+<!--<div>
+  <h1>{{nombre}} </h1>
+</div>
+<input type="button" (click)="CambiarNombre()" value="cambia de nombre"/>
+<div *ngFor="let elemento of ListaMensajes">
+  {{elemento}}
+</div>-->
+<!--app-message *ngFor="let elemento of ListaMensajes" texto="elemento a cui"></!--app-message> <!--[] recibe el componente de un input y
+                                                                                        el nombre de una variable-->
+
+<input type="type" [formControl] ="nameControl" />
+<input #text type="type" [formControl] ="textControl"/>
+<input type="button" (click)="EnviarMensaje()" value="Insertar datos" />
+
+<app-message *ngFor="let elemento of ListaMensajes | async"  [oMessage]="elemento"></app-message>
+<b>{{chatService.algo}}</b>
+
+
